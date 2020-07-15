@@ -1,0 +1,13 @@
+{
+    "name": "germix/json-object-wrapper",
+    "type": "library",
+    "description": "A json object wrapper to easy use with fields validation",
+    "license": "GPL-3.0-or-later",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Germix\\JsonObjectWrapper\\": "src"
+        }
+    }
+}
