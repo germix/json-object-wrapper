@@ -55,6 +55,14 @@ class JsonObject
     }
 
     /**
+     * Returns true if the field is defined.
+     */
+    public function has($fieldName)
+    {
+        return \array_key_exists($fieldName, $this->json);
+    }
+
+    /**
      * Get a required field
      */
     public function getRequiredField($fieldName)
