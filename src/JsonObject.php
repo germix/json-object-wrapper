@@ -28,7 +28,7 @@ class JsonObject
             {
                 if(is_object($value))
                 {
-                    $this->json[$key] = new JsonObject($value);
+                    $this->json[$key] = $this->createJsonObject($value);
                 }
                 else if(is_array($value))
                 {
@@ -36,7 +36,7 @@ class JsonObject
                     foreach($value as $k => $v)
                     {
                         if(is_object($v))
-                            $newArray[$k] = new JsonObject($v);
+                            $newArray[$k] = $this->createJsonObject($v);
                         else
                             $newArray[$k] = $v;
                     }
@@ -276,4 +276,8 @@ class JsonObject
         return is_bool($value);
     }
 
+    protected function createJsonObject($value)
+    {
+        return new JsonObject($value);
+    }
 }
