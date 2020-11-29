@@ -257,7 +257,7 @@ class JsonObject
      */
     private static function isFloat($value)
     {
-        return is_float($value);
+        return is_numeric($value);
     }
 
     /**
