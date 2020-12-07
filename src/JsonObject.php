@@ -154,7 +154,7 @@ class JsonObject
 
         if(!self::isString($value))
             throw new JsonObjectException('"'.$fieldName.'" must be a string' . ($nullable ? ' or null' : ''));
-        if(empty($value))
+        if(strlen($value) == 0)
             throw new JsonObjectException('"'.$fieldName.'" can\'t be empty');
 
         return $value;
